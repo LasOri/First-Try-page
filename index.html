@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>First Try — See it. Get it.</title>
+<meta name="description" content="First Try is a native macOS visual-context companion. Select any confusing content on screen, and it answers — grounded in what you actually browsed, not a web search." />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta property="og:title" content="First Try" />
+<meta property="og:description" content="Select confusing content on screen. Get an answer from what you already browsed." />
+<meta property="og:image" content="assets/logo.png" />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <img class="mark" src="assets/logo.png" alt="First Try app icon" width="108" height="108" />
+    <h1 class="wordmark">First Try</h1>
+    <p class="tagline">See it. Get it.</p>
+    <p class="lede">
+      A native macOS companion that watches your browser, remembers what you read,
+      and answers when you draw a rectangle around something confusing —
+      using your own recorded context, not a web search.
+    </p>
+    <a class="download" href="assets/FirstTry-macOS.zip" download>
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
+      Download for macOS
+    </a>
+    <p class="req">Version 0.1.0 &middot; macOS 26 or later &middot; 749 KB &middot; Apple Silicon</p>
+  </header>
+
+  <section class="how" aria-label="How it works">
+    <h2 class="section-title">How it works</h2>
+    <ol class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <div>
+          <strong>Choose a window</strong>
+          <p>Click the menu-bar icon, pick your browser. First Try starts recording visible content quietly in the background.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div>
+          <strong>Browse normally</strong>
+          <p>Change tabs, scroll, navigate, come back. First Try follows along and builds a searchable local history of what you actually saw.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div>
+          <strong>Draw a rectangle</strong>
+          <p>Press <kbd>⌃⌥`</kbd> and drag around anything confusing — a quiz question, an error, a term you've seen before but can't place.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div>
+          <strong>Get an answer</strong>
+          <p>A panel appears with the answer — drawn from relevant pages you browsed, not invented, not from the web.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="features" aria-label="Features">
+    <article class="card">
+      <div class="card-icon">🧠</div>
+      <h3>Answers from your own context</h3>
+      <p>The model sees what you saw. Relevant history is retrieved first; general model knowledge is clearly labeled as secondary.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">🔒</div>
+      <h3>Local-first by default</h3>
+      <p>Runs on-device with a local model (Gemma 4, MLX). Nothing leaves your Mac unless you configure a remote endpoint.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">⚡</div>
+      <h3>No web search, ever</h3>
+      <p>First Try never fetches URLs, calls search engines, or lets the model browse. Your evidence stays local; answers stay grounded.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">🎯</div>
+      <h3>Quiz questions, errors, concepts</h3>
+      <p>Select a question and get the answer. Select an error and get the fix. Select a term and get the explanation — from pages you actually read.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">📍</div>
+      <h3>Lives in the menu bar</h3>
+      <p>No Dock clutter. The icon shows recording status at a glance. The control popover opens on click; the floating answer panel appears at the selection.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">🕒</div>
+      <h3>24-hour rolling history</h3>
+      <p>Evidence expires after 24 hours and never grows past 1 GB. No manual cleanup, no surprise disk usage.</p>
+    </article>
+  </section>
+
+  <section class="why" aria-label="Why a visual context engine">
+    <h2>Why a visual context engine?</h2>
+    <p>
+      Most AI tools answer from training data. First Try answers from <em>your</em> data —
+      the pages you opened, the docs you scrolled, the tabs you kept coming back to.
+      The difference matters: it doesn't hallucinate a memory of something you never read,
+      and it can cite exactly where it found the answer.
+    </p>
+    <p>
+      The visual part is key. There's no browser extension, no tab-URL access, no paste-and-ask.
+      You draw a rectangle on screen. That's the interface. Whatever is visible at selection time
+      — a quiz, a terminal error, a diagram caption, a checkbox — becomes the question.
+      The rest is automatic.
+    </p>
+  </section>
+
+  <section class="install" aria-label="First launch">
+    <h2>Opening it the first time</h2>
+    <p>
+      First Try is ad-hoc signed but not notarized. When macOS blocks it,
+      right-click (or Control-click) <strong>First Try.app</strong> and choose
+      <strong>Open</strong>, then confirm. You only need to do this once.
+    </p>
+    <p>
+      You can also run this in Terminal to remove the quarantine attribute:
+    </p>
+    <pre><code>xattr -dr com.apple.quarantine "First Try.app"</code></pre>
+    <p class="muted">
+      First Try will ask for Screen Recording permission on first launch.
+      Grant it in System Settings &rarr; Privacy &amp; Security &rarr; Screen Recording,
+      then relaunch. Open Settings (&#8984;,) to configure your model endpoint.
+    </p>
+  </section>
+
+  <footer class="foot">
+    <span>First Try 0.1.0</span>
+    <span class="dot">&middot;</span>
+    <span>Visual context engine for macOS</span>
+  </footer>
+
+</main>
+</body>
+</html>

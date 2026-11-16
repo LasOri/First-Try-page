@@ -1,0 +1,296 @@
+:root {
+  --teal: #003539;
+  --teal-mid: #005a60;
+  --sage: #95aaad;
+  --ink: #1a1a1e;
+  --muted: #6b7280;
+  --bg: #f2f4f5;
+  --card: #ffffff;
+  --line: rgba(0, 53, 57, 0.10);
+  --step-bg: rgba(0, 53, 57, 0.06);
+}
+
+* { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 24px 56px;
+}
+
+/* ── Hero ── */
+.hero { text-align: center; }
+
+.mark {
+  width: 108px;
+  height: 108px;
+  border-radius: 26px;
+  box-shadow: 0 12px 36px rgba(0, 53, 57, 0.22), 0 2px 8px rgba(0, 53, 57, 0.10);
+}
+
+.wordmark {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 20px 0 4px;
+  color: var(--teal);
+}
+
+.tagline {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--teal-mid);
+  margin: 0 0 16px;
+}
+
+.lede {
+  max-width: 580px;
+  margin: 0 auto 32px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 13px;
+  background: var(--teal);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 53, 57, 0.30);
+  transition: transform 0.13s ease, box-shadow 0.13s ease, background 0.13s ease;
+}
+
+.download:hover {
+  background: var(--teal-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0, 53, 57, 0.38);
+}
+
+.download svg { display: block; flex-shrink: 0; }
+
+.req {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── Section titles ── */
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+  color: var(--ink);
+}
+
+/* ── How it works ── */
+.how {
+  margin: 72px 0 0;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.steps li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.steps li div { flex: 1; }
+
+.steps li strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.steps li p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--step-bg);
+  border: 1px solid var(--line);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+/* ── Feature cards ── */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 48px 0 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+
+.card-icon {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ── Why section ── */
+.why {
+  background: var(--teal);
+  border-radius: 16px;
+  padding: 36px 40px;
+  margin: 48px 0 0;
+  color: #fff;
+}
+
+.why h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.why p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.why p:last-child { margin-bottom: 0; }
+
+.why em {
+  font-style: normal;
+  color: var(--sage);
+  font-weight: 600;
+}
+
+/* ── Install ── */
+.install {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin: 48px 0 0;
+}
+
+.install h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.install p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.install p:last-child { margin-bottom: 0; }
+
+.install .muted { color: var(--muted); }
+
+pre {
+  background: var(--step-bg);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  margin: 0 0 12px;
+}
+
+code {
+  font-family: "SF Mono", ui-monospace, "Cascadia Code", Menlo, monospace;
+  font-size: 13px;
+  color: var(--teal);
+}
+
+/* ── Footer ── */
+.foot {
+  margin-top: 56px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.foot .dot { margin: 0 8px; }
+
+/* ── Responsive ── */
+@media (max-width: 580px) {
+  .wrap { padding: 56px 18px 40px; }
+  .wordmark { font-size: 38px; }
+  .features { grid-template-columns: 1fr; }
+  .why { padding: 28px 24px; }
+  .install { padding: 22px 20px; }
+  .steps li { flex-direction: column; gap: 12px; }
+}
